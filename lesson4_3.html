@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+function isEven (n) {
+	n = Math.abs(n);
+	if (n != 0 && n!= 1) {
+		return isEven (n - 2);
+	}
+	else return ('Логическое значение чётности - ' + !n);
+}
+	n = prompt ('Введите число');
+	console.log (isEven(n));
+</script>
+</body>
+</html>
