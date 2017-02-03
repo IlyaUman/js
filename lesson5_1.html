@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+  r = prompt ('Введите значение красного');
+  g = prompt ('Введите значение зелёного');
+  b = prompt ('Введите значение синего');
+  decToHex (r, g, b);
+  function decToHex (r, g, b) {
+  	var arr = [0, 0, 0];
+  	arr [0] = oneColor (r);
+  	arr [1] = oneColor (g);
+  	arr [2] = oneColor (b);
+  	colorHex = '#' + arr.join ('');
+  	return colorHex;
+
+  	function oneColor (x) {
+  		var str = '', i = 0, j = 0, k;
+  		q = x;
+  		if ((x < 0) || (x > 255)) {
+  			str = 'не является значением цвета';
+  		}
+  		else {
+  				k = x % 16;
+  				switch (k) {
+  				case 10:
+  					j = 'A';
+  					break;
+  				case 11:
+  					j = 'B';
+  					break;
+  				case 12:
+  					j = 'C';
+  					break;
+  				case 13:
+  					j = 'D';
+  					break;
+  				case 14:
+  					j = 'E';
+  					break;
+  				case 15:
+  					j = 'F';
+  					break;
+  				default: 
+  					j = k;
+  				}
+  				if (x > 15) {
+  					k = Math.floor (x / 16);
+  					switch (k) {
+  					case 10:
+  						i = 'A';
+  						break;
+  					case 11:
+  						i = 'B';
+  						break;
+  					case 12:
+  						i = 'C';
+  						break;
+  					case 13:
+  						i = 'D';
+  						break;
+  					case 14:
+  						i = 'E';
+  						break;
+  					case 15:
+  						i = 'F';
+  						break;
+  					default: 
+  						i = k;
+  					}
+  				}
+  				str = i + j;
+  			}
+  		return str;
+  	}
+}	
+
+</script>
+</body>
+</html>
