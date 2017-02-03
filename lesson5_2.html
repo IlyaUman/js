@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+  function numToObj (x) {
+    var chislo = {}, arr = [], k;
+
+    if (x > 999) {
+      console.log ('Число больше 999');
+    }
+    else {
+      arr = x.split ('');
+      k = arr.length;
+      switch (k) {
+        case 1:
+          chislo.единицы = arr [0];
+          break;
+        case 2:
+          chislo.единицы = arr [1];
+          chislo.десятки = arr [0];
+          break;
+        case 3:
+          chislo.единицы = arr [2];
+          chislo.десятки = arr [1];
+          chislo.сотни = arr [0]
+      }
+      console.log (chislo);
+    }
+
+  }
+  x = prompt ('Введите число');
+  numToObj (x);
+</script>
+</body>
+</html>
