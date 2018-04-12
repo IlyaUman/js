@@ -1,6 +1,12 @@
 var a, b;
 a = prompt ("Какое число возводим в степень?");
-b = prompt ("В какую степень возводим?");
-function pow (a,b) {
-  
+n = prompt ("В какую степень возводим?");
+function pow (a,n) {
+  var x = 1;
+  x *= a;
+  if (n > 1) {
+    x *= pow (x, n-1); 
+    } 
+  return x;
   }
+alert (pow(a, n))
