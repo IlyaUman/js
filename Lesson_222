@@ -13,10 +13,10 @@ while (true) {
       var obStr = "";
       for (var i = 0; i < 4; i++) {
         for (var j = 0; j < 4; j++) {
-          if ((x[i] == a[j]) && (i == j)) {
+          if ((xStr[i] == aStr[j]) && (i == j)) {
             obStr += "Корова";
             }
-          if ((x[i] == a[j]) && (i != j)) {
+          if ((xStr[i] == aStr[j]) && (i != j)) {
             obStr += "Бык";
             }
           }
