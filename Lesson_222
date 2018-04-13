@@ -3,12 +3,25 @@ x = Math.round(Math.random()*1000);
 while (true) {
   a = prompt ("Угадай число!");
   if (a == x) {
-    alert ("Верно!" + a + " " + x);
+    alert ("Верно!" + " " + a + " " + x);
     break;
     }
     else {
       if (a < x) {
-      alert ("a < x")
+      var aStr = a + "";
+      var xStr = x + "";
+      var obStr = "";
+      for (var i = 0; i < 4; i++) {
+        for (var j = 0; j < 4; j++) {
+          if ((x[i] == a[j]) && (i == j)) {
+            obStr += "Корова";
+            }
+          if ((x[i] == a[j]) && (i != j)) {
+            obStr += "Бык";
+            }
+          }
+        }
+      alert (obStr + "a < x")
       }
       else {
       alert ("a > x")
