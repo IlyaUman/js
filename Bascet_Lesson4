@@ -1,1 +1,42 @@
-
+var tov1 = {
+  model: "model1",
+  color: "color1",
+  size: 31,
+  price: 111,
+  inBasket: false,
+  putInBascet: function () {
+    this.inBascet = true;
+    },
+  deleteFromBascet: function () {
+    this.inBascet = false;
+    }
+ };
+var tov2 = {
+  model: "model2",
+  color: "color2",
+  size: 32,
+  price: 222,
+  inBasket: false,
+  putInBascet: function () {
+    this.inBascet = true;
+    },
+  deleteFromBascet: function () {
+    this.inBascet = false;
+    }
+ };
+ var tov3 = {
+  model: "model3",
+  color: "color3",
+  size: 33,
+  price: 333,
+  inBasket: false,
+  putInBascet: function () {
+    this.inBascet = true;
+    },
+  deleteFromBascet: function () {
+    this.inBascet = false;
+    }
+ };
+ var a = prompt ("Введите названия товаров через пробел");
+ var arr = a.split(" ");
+ alert (arr[0].model);
