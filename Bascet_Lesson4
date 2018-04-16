@@ -4,11 +4,11 @@ var tov1 = {
   size: 31,
   price: 111,
   inBasket: false,
-  putInBascet: function () {
-    this.inBascet = true;
+  putInBasket: function () {
+    this.inBasket = true;
     },
-  deleteFromBascet: function () {
-    this.inBascet = false;
+  deleteFromBasket: function () {
+    this.inBasket = false;
     }
  };
 var tov2 = {
@@ -17,11 +17,11 @@ var tov2 = {
   size: 32,
   price: 222,
   inBasket: false,
-  putInBascet: function () {
-    this.inBascet = true;
+  putInBasket: function () {
+    this.inBasket = true;
     },
-  deleteFromBascet: function () {
-    this.inBascet = false;
+  deleteFromBasket: function () {
+    this.inBasket = false;
     }
  };
  var tov3 = {
@@ -30,13 +30,40 @@ var tov2 = {
   size: 33,
   price: 333,
   inBasket: false,
-  putInBascet: function () {
-    this.inBascet = true;
+  putInBasket: function () {
+    this.inBasket = true;
     },
-  deleteFromBascet: function () {
-    this.inBascet = false;
+  deleteFromBasket: function () {
+    this.inBasket = false;
     }
  };
+ var basket = {
+    basketPrice: function () {
+      var s = 0;
+      if (tov1.inBasket == true) {
+        s += tov1.price
+        };
+      if (tov2.inBasket == true) {
+        s += tov2.price
+        };
+      if (tov3.inBasket == true) {
+        s += tov3.price
+        };
+      return s;
+      }
+    }
  var a = prompt ("Введите названия товаров через пробел");
  var arr = a.split(" ");
- alert (arr[0].model);
+ 
+ for (var i = 0; i < arr.length; i++) {
+    if (arr[i] == "model1") {
+      tov1.putInBasket();
+      }
+    if (arr[i] == "model2") {
+      tov2.putInBasket();
+      }
+    if (arr[i] == "model3") {
+      tov3.putInBasket();
+      }
+  };
+  alert (basket.basketPrice ())
