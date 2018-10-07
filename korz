@@ -1,0 +1,40 @@
+   var arrOfGoods = [tov1, tov2, tov3, tov4];
+    var korz = [];
+    //    var priceTotal = 0;
+    var tov1 = {
+        id: 1,
+        name: 'name1',
+        price: 1
+    };
+    var tov2 = {
+        id: 2,
+        name: 'name2',
+        price: 10
+    };
+    var tov3 = {
+        id: 3,
+        name: 'name3',
+        price: 100
+    };
+    var tov4 = {
+        id: 4,
+        name: 'name4',
+        price: 1000
+    };
+    var arrTov = prompt('Введите номера товаров через пробел');
+    var zakaz = arrTov.split(' ')
+    for (i = 0; i < zakaz.length; i++) {
+        korz.push(arrOfGoods[zakaz[i]])
+    };
+    var oforml = {
+        spisokTovarov: korz,
+        dostavka: 'pochta',
+        priceTotal: 0,
+        cost: function () {
+            for (i = 0; i < this.spisokTovarov.length; i++) {
+                this.priceTotal += this.spisokTovarov[i].price;
+            }
+        }
+    };
+    oforml.cost();
+    alert(oforml.priceTotal);
